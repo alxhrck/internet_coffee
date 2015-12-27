@@ -1,14 +1,15 @@
 import wiringpi2 as GPIO
 import time
 
-GPIO.wiringPiSetupGpio()
+GPIO.wiringPiSetupSys()
 PIN = 10
 GPIO.pinMode(PIN, 1) # 1 = GPIO.OUT, 0 = GPIO.INPUT
 GPIO.digitalWrite(PIN, 1) # 1 = GPIO.HIGH, 0 = GPIO.LOW
 
 try:
+	time.sleep(3)
 	print 'Heating...'
-	GPIO.digitalWrite(PIN, 0)
+	GPIO.digitalWrite(PIN, 1)
 	time.sleep(10)
 
 	print 'Cooling Down...'
@@ -18,6 +19,6 @@ try:
 	print 'Enjoy!'
 
 finally:
-	GPIO.digitalWrite(PIN, 0)
-	GPIO.pinMode(PIN, 0) 
-	exit('Caught ctrl-c')
+	#GPIO.digitalWrite(PIN, 0)
+	#GPIO.pinMode(PIN, 0) 
+	exit()

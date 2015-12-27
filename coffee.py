@@ -2,7 +2,7 @@ __author__ = 'alex'
 
 from flask import Flask, request, render_template, jsonify, url_for
 from celery import Celery
-import RPi.GPIO as GPIO
+import wiringpi2 as GPIO
 import time
 
 def make_celery(app):
@@ -26,31 +26,29 @@ app.config.update(
 celery = make_celery(app)
 
 PIN = 10
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(PIN, GPIO.OUT)
-GPIO.output(PIN, GPIO.HIGH)
+GPIO.wiringPiSetupSys()
+GPIO.pinMode(PIN, 1)
+GPIO.digitalWrite(PIN, 1)
 
 @celery.task(bind=True)
 def coffee_pot(self, action):
 	try:
-		m = dict()
 		if 'Start' in action:
 			print 'Heating...'
 			self.update_state(state='BREWING',)
-			GPIO.output(PIN, GPIO.LOW)
+			GPIO.digitalWrite(PIN, 0)
 			time.sleep(60)
 			m['text'] = 'Enjoy!'
 			return True
 		else:
 			print 'Cooling Down...'
 			self.update_state(state='OFF',)
-			GPIO.output(PIN, GPIO.HIGH)
+			GPIO.digitalWrite(PIN, 1)
 			time.sleep(1)
 			return True
 
-	except KeyboardInterrupt:
-		GPIO.cleanup()
-		exit('aught ctrl-c')
+	finally:
+		GPIO.digitalWrite(PIN), 1)
 
 
 
