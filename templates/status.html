@@ -1,0 +1,25 @@
+<html>
+<head>
+	<link rel="icon" type="image/png" href="{{url_for('static', filename='favicon.ico')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylee.css') }}">
+	<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+	<script>
+		setInterval(
+		  function()
+		  {
+		  $.getJSON('/check_status',
+		  		{task_id: $('input[name=task_id]').val()},
+				function(data)
+					{$("#result").text(data.result);
+					}); },  10000);
+    </script>
+</head>
+
+<body>
+<input type="hidden" name="task_id" value="{{task_id}}">
+	<div id=result>
+		<h1>Status: Brewing</h1>
+	</div>
+
+</body>
+</html>

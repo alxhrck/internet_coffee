@@ -1,0 +1,131 @@
+div, body, html {
+	background: #FFF;
+	padding: 10px;
+	margin: 0px;
+	font-family: "HelveticaNeue-Light";
+	letter-spacing: -2px;
+	color: #000;
+	font-size: 50px;
+	 -webkit-font-smoothing: antialiased;
+}
+
+.top
+{
+	position: absolute;
+	top: 50px;
+}
+
+.left
+{
+	position: absolute;
+	left: 50px;
+}
+.right
+{
+	position: absolute;
+	right: 50px;
+	text-align: right;
+}
+
+.center-ver
+{
+	position: absolute;
+	top: 50%;
+	height: 200px;
+	margin-top: -100px;
+	line-height: 100px;
+}
+
+.lower-third
+{
+	position: absolute;
+	top: 66.666%;
+	height: 200px;
+	margin-top: -100px;
+	line-height: 100px;	
+}
+
+.center-hor
+{
+	position: absolute;
+	right: 50px;
+	left: 50px;
+	text-align: center;	
+}
+
+.bottom
+{
+	position: absolute;
+	bottom: 50px;
+}
+
+.xxsmall
+{
+	font-size: 15px;
+	letter-spacing: 0px;
+	font-family: "HelveticaNeue-Medium";
+}
+.xxsmall .wi {
+	line-height: 15px;
+}
+
+.xsmall
+{
+	font-size: 20px;
+	letter-spacing: 0px;
+	font-family: "HelveticaNeue-Medium";
+}
+
+.small
+{
+	font-size: 25px;
+	letter-spacing: 0px;
+	font-family: "HelveticaNeue-Medium";
+}
+
+.medium
+{
+	font-size: 35px;
+	letter-spacing: -1px;
+	font-family: "HelveticaNeue-Light";
+}
+
+.xdimmed
+{
+	color: #666;
+} 
+
+.dimmed
+{
+	color: #aaa;
+}
+
+.light
+{
+	font-family: "HelveticaNeue-UltraLight";
+}
+
+.time {
+	font-size: 75px;
+	padding-left: 15px;
+	position: relative;
+}
+
+.date {
+	font-size: 25px;
+	padding-left: 0px;
+	position: relative;
+}
+
+
+@font-face {
+  font-family: 'HelveticaNeue-Light';
+  src: url('/static/font/HelveticaNeue-Light.eot'); /* IE9 Compat Modes */
+  src: url('/static/font/HelveticaNeue-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/static/font/HelveticaNeue-Light.woff') format('woff'), /* Modern Browsers */
+       url('/static/font/HelveticaNeue-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/static/font/HelveticaNeue-Light.svg#7384ecabcada72f0e077cd45d8e1c705') format('svg'); /* Legacy iOS */      
+  font-style:   normal;
+  font-weight:  200;
+}
+
