@@ -7,15 +7,13 @@ GPIO.pinMode(PIN, 1) # 1 = GPIO.OUT, 0 = GPIO.INPUT
 GPIO.digitalWrite(PIN, 1) # 1 = GPIO.HIGH, 0 = GPIO.LOW
 
 try:
-	time.sleep(3)
 	print 'Heating...'
-	GPIO.digitalWrite(PIN, 1)
-	time.sleep(10)
+	GPIO.digitalWrite(PIN, 0)
+	time.sleep(1)
 
 	print 'Cooling Down...'
 	GPIO.digitalWrite(PIN, 1)
 	time.sleep(1)
-	GPIO.cleanup()
 	print 'Enjoy!'
 
 finally:

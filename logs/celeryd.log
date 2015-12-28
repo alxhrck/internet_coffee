@@ -106,3 +106,119 @@ worker: Warm shutdown (MainProcess)
  -------------- .> celery           exchange=celery(direct) key=celery
                 
 
+Traceback (most recent call last):
+  File "/usr/local/bin/celery", line 9, in <module>
+    load_entry_point('celery==3.1.19', 'console_scripts', 'celery')()
+  File "/usr/local/lib/python2.7/dist-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 770, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 309, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 469, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 489, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/usr/local/lib/python2.7/dist-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 492, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/usr/local/lib/python2.7/dist-packages/kombu/utils/__init__.py", line 96, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/pi/internet_coffee/coffee.py", line 51
+    GPIO.digitalWrite(PIN), 1)
+                             ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "/usr/local/bin/celery", line 9, in <module>
+    load_entry_point('celery==3.1.19', 'console_scripts', 'celery')()
+  File "/usr/local/lib/python2.7/dist-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 770, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 309, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 469, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 489, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/usr/local/lib/python2.7/dist-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 492, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/usr/local/lib/python2.7/dist-packages/kombu/utils/__init__.py", line 96, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/pi/internet_coffee/coffee.py", line 51
+    GPIO.digitalWrite(PIN), 1)
+                             ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "/usr/local/bin/celery", line 9, in <module>
+    load_entry_point('celery==3.1.19', 'console_scripts', 'celery')()
+  File "/usr/local/lib/python2.7/dist-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 770, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 309, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 469, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 489, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/usr/local/lib/python2.7/dist-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 492, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/usr/local/lib/python2.7/dist-packages/kombu/utils/__init__.py", line 96, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/pi/internet_coffee/coffee.py", line 51
+    GPIO.digitalWrite(PIN), 1)
+                             ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "/usr/local/bin/celery", line 9, in <module>
+    load_entry_point('celery==3.1.19', 'console_scripts', 'celery')()
+  File "/usr/local/lib/python2.7/dist-packages/celery/__main__.py", line 30, in main
+    main()
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 81, in main
+    cmd.execute_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 770, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 309, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 469, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 489, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/usr/local/lib/python2.7/dist-packages/celery/app/utils.py", line 229, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 492, in symbol_by_name
+    return symbol_by_name(name, imp=imp)
+  File "/usr/local/lib/python2.7/dist-packages/kombu/utils/__init__.py", line 96, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/celery/utils/imports.py", line 101, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/pi/internet_coffee/coffee.py", line 51
+    GPIO.digitalWrite(PIN), 1)
+                             ^
+SyntaxError: invalid syntax

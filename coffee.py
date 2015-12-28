@@ -48,7 +48,7 @@ def coffee_pot(self, action):
 			return True
 
 	finally:
-		GPIO.digitalWrite(PIN), 1)
+		GPIO.digitalWrite(PIN, 1)
 
 
 
@@ -104,4 +104,8 @@ def status(task_id):
 
 
 if __name__ == '__main__':
-	app.run(debug=False, host='0.0.0.0')
+	try:
+		app.run(debug=False, host='0.0.0.0')
+	finally:
+		GPIO.digitalWrite(PIN, 1)
+		print '[+] Done'
