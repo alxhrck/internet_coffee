@@ -38,7 +38,6 @@ def coffee_pot(self, action):
 			self.update_state(state='BREWING',)
 			GPIO.digitalWrite(PIN, 0)
 			time.sleep(60)
-			m['text'] = 'Enjoy!'
 			return True
 		else:
 			print 'Cooling Down...'
@@ -48,7 +47,8 @@ def coffee_pot(self, action):
 			return True
 
 	finally:
-		GPIO.digitalWrite(PIN, 1)
+		pass
+		#GPIO.digitalWrite(PIN, 1)
 
 
 

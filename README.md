@@ -11,11 +11,9 @@
 ###Setup
  1. sudo chmod u+s gpio
  2. gpio export 10 out
- 3. gpio -g mode 10 out
- 4. gpio -g write 10 1
  
 ###Run
-1. sudo uwsgi -d --ini coffee.ini
+1. sudo uwsgi --ini coffee.ini -d logs/uwsgi.log
 2. supervisord
 3. (start) nginx
  
