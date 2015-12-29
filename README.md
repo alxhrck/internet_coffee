@@ -1,12 +1,12 @@
 ###Requirements
 
--Flask
--Celery
--WiringPi2
--WiringPi2 - gpio
--Redis
--Uwsgi
--Nginx
+- Flask
+- Celery
+- WiringPi2
+- WiringPi2 - gpio
+- Redis
+- Uwsgi
+- Nginx
 
 ###Setup
  1. sudo chmod u+s gpio
