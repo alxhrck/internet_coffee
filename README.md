@@ -11,7 +11,7 @@
 
 ###Setup
  1. sudo chmod u+s gpio
- 2. gpio export 10 out
+ 2. /usr/local/bin/gpio export 10 out
  
 ###Run
 1. sudo uwsgi --ini coffee.ini -d logs/uwsgi.log
