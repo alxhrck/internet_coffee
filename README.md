@@ -2,6 +2,7 @@
 
 - Flask
 - Celery
+- Supervisor
 - WiringPi2
 - WiringPi2 - gpio
 - Redis
