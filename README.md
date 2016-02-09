@@ -5,7 +5,7 @@
 - Supervisor
 - WiringPi2
 - WiringPi2 - gpio
-- Redis
+- Redis + Redis python package
 - Uwsgi
 - Nginx
 
@@ -15,6 +15,7 @@
  
 ###Run
 1. sudo uwsgi --ini coffee.ini -d logs/uwsgi.log
-2. supervisord
-3. (start) nginx
+2. /usr/local/bin/celery -A coffee.celery worker
+3. supervisord
+4. (start) nginx
  
