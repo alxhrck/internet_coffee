@@ -4,7 +4,7 @@
 - Celery
 - Supervisor
 - WiringPi2
-- WiringPi2 - gpio
+- WiringPi2 - gpio (git clone git://git.drogon.net/wiringPi)
 - Redis + Redis python package
 - Uwsgi
 - Nginx
